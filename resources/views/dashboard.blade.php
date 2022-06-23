@@ -12,6 +12,7 @@
                     You're logged in!
 
                     <a class="text-center border-gray-100 text-red-600 block" href="/users">list of phones</a>
+                    <a class="text-center border-gray-100 text-red-600 block mt-2" href="/users/create">New phones</a>
                 </div>
             </div>
         </div>
