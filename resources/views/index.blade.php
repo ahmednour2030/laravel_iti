@@ -10,6 +10,8 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <a class="text-left border-gray-100 text-green-600 block mx-5 mt-4" href="/users/create">create phones</a>
+
                 <table class="table m-5 p-2">
                     <thead>
                     <tr>
