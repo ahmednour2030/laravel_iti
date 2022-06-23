@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $phones = Phone::whereUserId(Auth::id());
+        $phones = Phone::whereUserId(Auth::id())->get();
 
         return view('index', ['phones' => $phones]);
     }
