@@ -1,35 +1,24 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+        <h2 class="h4 font-weight-bold">
+            {{ __('Edit Phone') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <form method="POST" action="{{route('users.update', $phone->id)}}">
-                        @csrf
-                        <input type="hidden" name="_method" value="put" />
+    <div class="card my-4">
+        <div class="card-body">
+            <form method="POST" action="{{route('users.update', $phone->id)}}">
+                @csrf
+                <input type="hidden" name="_method" value="put" />
 
-                        <!-- Email Address -->
-                        <div>
-                            <x-label for="email" :value="__('Phone')" />
-
-                            <x-input id="phone" class="block mt-1 w-full" type="number" name="phone" value="{{$phone->phone}}" required autofocus />
-                        </div>
-
-                        <div class="flex items-center justify-end mt-4">
-
-                            <x-button class="ml-3">
-                                {{ __('Submit') }}
-                            </x-button>
-
-                        </div>
-                    </form>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="phone" value="{{$phone->phone}}" name="phone" placeholder="phone">
                 </div>
-            </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </x-app-layout>
